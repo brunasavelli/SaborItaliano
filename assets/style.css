@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(0, 0, 0);
+    background-color: rgba(253, 237, 203, 0.808);
 }
 .links {
     display: flex;
@@ -20,8 +20,8 @@ body {
     transition: 0.3s ease-in-out;
 }
 a:hover {
-    border-bottom: 3px solid rgb(0, 0, 0); 
-    color: #d6bfbf;
+    border-bottom: 3px solid rgb(36, 97, 0); 
+    color: #ffffff;
     transform: scale(1.05);
 }
 .logo img {
@@ -36,51 +36,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #bb000081;
+    background-color: #4f9448;
     height: 90px;
 }
-h1 {
-    color: red
-}
-.salaCinema {
+.imgFundo {
+    width: 1327px;
     height: 600px;
-    width: 1500px;
-}
-.deadpool {
-    background-color: #ad0101b4;
-    width: 20%;
-    margin-top: 1.5%;
-}
-.deadpool:hover {
-    border: 3px solid #ad0101b4;
-    transform: scale(1.05);
-    box-shadow: 0 0 10px #ad0101b4;
-}
-.deadpool img {
-    width: 100%;
-    height: 100%;
-}
-h3 {
-    margin-top: 1.5%;
-    margin-left: 1.5%;
-}
-.deadpool p {
-    padding: 10px;
-}
-.assimacaba {
-    background-color: #ad0101b4;
-    width: 20%;
-    margin-top: 1.5%;
-}
-.assimacaba:hover {
-    border: 3px solid #ad0101b4;
-    transform: scale(1.05);
-    box-shadow: 0 0 10px #ad0101b4;
-}
-.assimacaba img {
-    width: 100%;
-    height: 100%;
-}
-.assimacaba{
-    float: right;
 }
