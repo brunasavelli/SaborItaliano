@@ -56,6 +56,7 @@ header {
     left:50%;
     top:50%;
     position:relative;
+    filter: grayscale(0.5);
 }
 
 .hero .sobre-nos {
@@ -96,16 +97,57 @@ footer {
 }
 
 .endereco {
-    float: left;
-    margin-left: 5%;
+    float: center;
 }
 
 .contato {
     float: center;
-    margin-right: 23%;
 }
 
 .horario-funcionamento {
-    float: right;
-    margin-right: 5%;
+    float: center;
+}
+
+.sobre-desenvolvedor {
+    margin-top: 100px;
+    position: relative;
+}
+
+.bruna {
+    width: 600px;
+    height: 600px;
+    object-fit: cover;
+    top:50%;
+    position:relative;
+    border-radius: 50%;
+    margin-left: 5%;
+    filter: grayscale(0.3);
+}
+
+.sobre-desenvolvedor .sobre-bruna {
+    position: absolute;
+    top: 45%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: rgb(48, 48, 48);
+    width: 35%;
+}
+
+.sobre-bruna h1{
+    font-weight: 600;
+    text-align: left;
+}
+
+.sobre-bruna h2 {
+    font-weight: 400;
+    text-align: left;
+    color:#7b3911;
+}
+
+.sobre-bruna p {
+    font-size: 20px;
+    font-weight: 100;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(48, 48, 48);
 }
