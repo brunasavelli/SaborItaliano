@@ -43,3 +43,67 @@ header {
     width: 100%;
     z-index: 1000; 
 }
+
+h1 {
+    text-align: center;
+    color: #555;
+    font-family: Arial, Helvetica, sans-serif;
+}
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #ffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+form fieldset{
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+form label{
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+form legend {
+    padding: 0 10px;
+    font-weight: bold;
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+}
+form input[type="text"],
+form input[type="email"],
+form input[type="number"],
+form input[type="date"],
+form select,
+form button,
+form textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+form input[type="radio"],
+form input[type="checkbox"]{
+    margin-right: 10px;
+}
+form button {
+    cursor: pointer;
+    background-color: #5cb85c;
+    color:#fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+form button:hover {
+    background-color: #69eb69;
+}
+
+legend {
+    font-family: Arial, Helvetica, sans-serif;
+}
