@@ -87,79 +87,89 @@ p {
     width: 25%;
     height: 215px;
     margin-top: 5%;
-    margin-left: 10%;
+    margin-left: 200px;
     margin-bottom: 10%;
     box-shadow: 0 0 10px;
 }
 
-.pizza:hover { 
-    transform: scale(1.05);
-    filter: saturate(1.2);
-}
-
-.lasanha {
+.lasanha, .risoto, .carbonara, .tiramisu{
     width: 25%;
     height: 215px;
-    margin-top: 5%;
-    margin-left: 5%;
+    margin-left: 200px;
     margin-bottom: 10%;
     box-shadow: 0 0 10px;
 }
 
-.lasanha:hover {
+.pizza:hover, .lasanha:hover, .risoto:hover, .carbonara:hover, .tiramisu:hover, .gnocchi:hover { 
     transform: scale(1.05);
     filter: saturate(1.2);
 }
 
-.risoto {
-    width: 25%;
-    height: 215px;
-    margin-top: 5%;
-    margin-left: 5%;
-    margin-bottom: 10%;
-    box-shadow: 0 0 10px;
+.sobre-pizza, .sobre-lasanha, .sobre-tiramisu {
+    position: relative;
 }
 
-.risoto:hover {
-    transform: scale(1.05);
-    filter: saturate(1.2);
+.sobre-pizza .pizza-text {
+    position: absolute;
+    top: 30%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: rgb(48, 48, 48);
+    width: 70%;
 }
 
-.carbonara {
-    width: 25%;
-    height: 215px;
-    margin-left: 10%;
-    margin-bottom: 10%;
-    box-shadow: 0 0 10px;
+.sobre-lasanha .lasanha-text, .sobre-tiramisu .tiramisu-text {
+    position: absolute;
+    top: 15%;
+    left: 65%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: rgb(48, 48, 48);
+    width: 70%;
 }
 
-.carbonara:hover {
-    transform: scale(1.05);
-    filter: saturate(1.2);
+.pizza-text h1 {
+    font-weight: 600;
+    text-align: left;
 }
 
-.tiramisu {
-    width: 25%;
-    height: 215px;
-    margin-left: 5%;
-    margin-bottom: 10%;
-    box-shadow: 0 0 10px;
+.lasanha-text h1, .tiramisu-text h1 {
+    font-weight: 600;
+    text-align: left;
 }
 
-.tiramisu:hover {
-    transform: scale(1.05);
-    filter: saturate(1.2);
+.pizza-text p {
+    font-size: 20px;
+    font-weight: 100;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(48, 48, 48);
 }
 
-.gnocchi {
-    width: 25%;
-    height: 215px;
-    margin-left: 5%;
-    margin-bottom: 10%;
-    box-shadow: 0 0 10px;
+.lasanha-text p, .tiramisu-text p {
+    font-size: 20px;
+    font-weight: 100;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(48, 48, 48);
 }
 
-.gnocchi:hover {
-    transform: scale(1.05);
-    filter: saturate(1.2);
+footer {
+    background-color: #7b3a11e7;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+    margin-bottom: 0;
+}
+
+.endereco, .endereco p {
+    float: center;
+    color: white;
+    text-align: center;
+}
+
+.contato, .contato p {
+    float: center;
+    color: white;
+    text-align: center;
 }
