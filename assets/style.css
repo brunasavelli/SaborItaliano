@@ -26,7 +26,7 @@ body {
 }
 
 .logo img {
-    height: 80px;
+    height: 99.5px;
     margin-left: 100px;
     margin-top: 2%;
 }
@@ -46,21 +46,21 @@ header {
 
 .imgFundo {
     width: 100%; 
-    height: 600px; 
+    height: 100%; 
     object-fit: cover; 
-    filter: grayscale(0.4);
+    filter: grayscale(0.5);
     margin-top: 100px;
 }
 
 
-.image-text {
+.image-container .image-text {
     position: absolute;
-    top: 85%;
-    left: 35%;
+    top:85%;
+    left: 37%;
     transform: translate(-50%, -50%);
     z-index: 1;
-    color: white;
-    font-size: 60px;
+    color: rgba(255, 255, 255, 0.911);
+    font-size: 100px;
     font-weight: bold;
 }
 
@@ -92,7 +92,7 @@ p {
     box-shadow: 0 0 10px;
 }
 
-.lasanha, .risoto, .carbonara, .tiramisu{
+.lasanha, .tiramisu, .risoto, .cannoli, .panna-cotta{
     width: 25%;
     height: 215px;
     margin-left: 200px;
@@ -100,12 +100,11 @@ p {
     box-shadow: 0 0 10px;
 }
 
-.pizza:hover, .lasanha:hover, .risoto:hover, .carbonara:hover, .tiramisu:hover, .gnocchi:hover { 
+.pizza:hover, .lasanha:hover, .tiramisu:hover, .risoto:hover, .cannoli:hover, .panna-cotta:hover { 
     transform: scale(1.05);
-    filter: saturate(1.2);
 }
 
-.sobre-pizza, .sobre-lasanha, .sobre-tiramisu {
+.sobre-pizza, .sobre-lasanha, .sobre-tiramisu, .sobre-risoto, .sobre-cannoli, .sobre-panna-cotta {
     position: relative;
 }
 
@@ -119,7 +118,7 @@ p {
     width: 70%;
 }
 
-.sobre-lasanha .lasanha-text, .sobre-tiramisu .tiramisu-text {
+.sobre-lasanha .lasanha-text, .sobre-tiramisu .tiramisu-text, .sobre-risoto .risoto-text, .sobre-cannoli .cannoli-text, .panna-cotta-text {
     position: absolute;
     top: 15%;
     left: 65%;
@@ -134,7 +133,7 @@ p {
     text-align: left;
 }
 
-.lasanha-text h1, .tiramisu-text h1 {
+.lasanha-text h1, .tiramisu-text h1, .risoto-text h1, .cannoli-text h1, .panna-cotta-text h1 {
     font-weight: 600;
     text-align: left;
 }
@@ -146,7 +145,7 @@ p {
     color: rgb(48, 48, 48);
 }
 
-.lasanha-text p, .tiramisu-text p {
+.lasanha-text p, .tiramisu-text p, .risoto-text p, .cannoli-text p, .panna-cotta-text p {
     font-size: 20px;
     font-weight: 100;
     font-family: Arial, Helvetica, sans-serif;
