@@ -1,109 +1,351 @@
-body {
-    background-color: #f2f1e6dc;
-    margin: 0; 
+/* ============================================
+   Sabor Italiano — Contato
+   Mesmos tokens visuais das outras páginas
+   ============================================ */
+
+:root {
+    --cream: #FAF3E8;
+    --basil: #2F4538;
+    --basil-dark: #1E2D24;
+    --tomato: #C1432D;
+    --gold: #C99A3E;
+    --ink: #2A2118;
+    --ink-soft: #5B5142;
+
+    --font-display: "Fraunces", serif;
+    --font-body: "Inter", sans-serif;
+
+    --max-width: 1140px;
+}
+
+* {
+    margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--ink);
+    background: var(--cream);
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ============ Header ============ */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 5%;
+    background: var(--cream);
+    border-bottom: 1px solid rgba(42, 33, 24, 0.08);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.logo img {
+    height: 38px;
+    width: auto;
+}
+
+.logo-text {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: var(--basil);
+    letter-spacing: 0.02em;
 }
 
 .links {
     display: flex;
-    justify-content: space-around;
-    width: 50%;
+    gap: 2.2rem;
 }
 
 .links a {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 1.2rem;
-    border-bottom: 3px solid transparent;
-    border-radius: 6px;
-    transition: 0.3s ease-in-out;
+    position: relative;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--ink-soft);
+    transition: color 0.25s ease;
+    padding-bottom: 4px;
 }
 
-.links a:hover { 
-    border-bottom: 3px solid #d42e1f;
-    color: #ffd0b3;
-    transform: scale(1.05);
-}
-
-.logo img {
-    height: 99.5px;
-    margin-left: 100px;
-    margin-top: 2%;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #7b3911;
-    height: 100px;
-    position: fixed; 
-    top: 0;
+.links a::after {
+    content: "";
+    position: absolute;
     left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: var(--tomato);
+    transition: width 0.25s ease;
+}
+
+.links a:hover,
+.links a.active {
+    color: var(--tomato);
+}
+
+.links a:hover::after,
+.links a.active::after {
     width: 100%;
-    z-index: 1000; 
 }
 
-h1 {
+/* ============ Hero / intro ============ */
+
+.contato-hero {
+    max-width: var(--max-width);
+    margin: 4.5rem auto 0;
+    padding: 0 5%;
     text-align: center;
-    color: #555;
-    font-family: Arial, Helvetica, sans-serif;
-}
-form {
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: #ffff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-form fieldset{
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin-bottom: 10px;
-}
-form label{
-    display: block;
-    margin-bottom: 5px;
-    color: #333;
-    font-family: Arial, Helvetica, sans-serif;
-}
-form legend {
-    padding: 0 10px;
-    font-weight: bold;
-    color: #333;
-    font-family: Arial, Helvetica, sans-serif;
-}
-form input[type="text"],
-form input[type="email"],
-form input[type="number"],
-form input[type="date"],
-form select,
-form button,
-form textarea {
-    width: calc(100% - 20px);
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-form input[type="radio"],
-form input[type="checkbox"]{
-    margin-right: 10px;
-}
-form button {
-    cursor: pointer;
-    background-color: #5cb85c;
-    color:#fff;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    font-size: 16px;
-}
-form button:hover {
-    background-color: #69eb69;
 }
 
-legend {
-    font-family: Arial, Helvetica, sans-serif;
+.eyebrow {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--tomato);
+    font-weight: 600;
+    margin-bottom: 0.8rem;
+}
+
+.section-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    color: var(--basil);
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.contato-intro {
+    max-width: 560px;
+    margin: 0 auto;
+    color: var(--ink-soft);
+    font-size: 1.02rem;
+}
+
+/* ============ Layout principal ============ */
+
+.contato-wrap {
+    max-width: var(--max-width);
+    margin: 3.5rem auto 5.5rem;
+    padding: 0 5%;
+    display: grid;
+    grid-template-columns: 0.85fr 1.5fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+/* ============ Coluna de informações ============ */
+
+.contato-info {
+    background: var(--basil-dark);
+    color: var(--cream);
+    border-radius: 18px;
+    padding: 2.5rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.info-bloco b {
+    display: block;
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    color: var(--gold);
+    margin-bottom: 0.6rem;
+}
+
+.info-bloco p {
+    font-size: 0.95rem;
+    color: rgba(250, 243, 232, 0.88);
+}
+
+/* ============ Formulário ============ */
+
+.contato-form {
+    background: #ffffff;
+    border-radius: 18px;
+    padding: 2.8rem;
+    box-shadow: 0 18px 40px rgba(42, 33, 24, 0.07);
+}
+
+.contato-form fieldset {
+    border: none;
+}
+
+.contato-form legend {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: var(--basil);
+    margin-bottom: 1.8rem;
+    padding: 0;
+}
+
+.campo-duplo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.3rem;
+}
+
+.campo label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--ink);
+    margin-bottom: 0.5rem;
+}
+
+.campo input,
+.campo textarea {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    padding: 0.85rem 1rem;
+    border: 1.5px solid rgba(42, 33, 24, 0.15);
+    border-radius: 10px;
+    background: var(--cream);
+    color: var(--ink);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.campo input::placeholder,
+.campo textarea::placeholder {
+    color: rgba(42, 33, 24, 0.4);
+}
+
+.campo input:focus,
+.campo textarea:focus {
+    outline: none;
+    border-color: var(--tomato);
+    box-shadow: 0 0 0 3px rgba(193, 67, 45, 0.12);
+}
+
+.campo textarea {
+    resize: vertical;
+    min-height: 110px;
+}
+
+.contato-form button {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.9rem 2.4rem;
+    background: var(--tomato);
+    color: var(--cream);
+    border: none;
+    border-radius: 999px;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    transition: background 0.25s ease, transform 0.15s ease;
+}
+
+.contato-form button:hover {
+    background: var(--basil);
+    transform: translateY(-1px);
+}
+
+/* ============ Footer ============ */
+
+.site-footer {
+    background: var(--basil-dark);
+    color: var(--cream);
+    padding: 3.5rem 5%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.site-footer b {
+    display: block;
+    font-size: 0.8rem;
+    letter-spacing: 0.14em;
+    color: var(--gold);
+    margin-bottom: 0.7rem;
+}
+
+.site-footer p {
+    font-size: 0.92rem;
+    color: rgba(250, 243, 232, 0.85);
+}
+
+.footer-brand .logo-text {
+    color: var(--cream);
+}
+
+.footer-brand p {
+    margin-top: 0.6rem;
+    font-style: italic;
+    color: rgba(250, 243, 232, 0.6);
+}
+
+/* ============ Responsivo ============ */
+
+@media (max-width: 900px) {
+    .contato-wrap {
+        grid-template-columns: 1fr;
+    }
+
+    .contato-info {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 2rem 3rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .campo-duplo {
+        grid-template-columns: 1fr;
+    }
+
+    .contato-form {
+        padding: 2rem 1.4rem;
+    }
+
+    .contato-info {
+        flex-direction: column;
+    }
+
+    .links {
+        gap: 1.2rem;
+    }
+
+    .logo-text {
+        font-size: 1.1rem;
+    }
+
+    .site-footer {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
 }

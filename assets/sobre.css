@@ -1,131 +1,313 @@
-body {
-    background-color: #f2f1e6dc;
-    margin: 0; 
+/* ============================================
+   Sabor Italiano — Sobre
+   Mesmos tokens visuais da home (style.css)
+   ============================================ */
+
+:root {
+    --cream: #FAF3E8;
+    --basil: #2F4538;
+    --basil-dark: #1E2D24;
+    --tomato: #C1432D;
+    --gold: #C99A3E;
+    --ink: #2A2118;
+    --ink-soft: #5B5142;
+
+    --font-display: "Fraunces", serif;
+    --font-body: "Inter", sans-serif;
+
+    --max-width: 1140px;
+}
+
+* {
+    margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--ink);
+    background: var(--cream);
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ============ Header ============ */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 5%;
+    background: var(--cream);
+    border-bottom: 1px solid rgba(42, 33, 24, 0.08);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.logo img {
+    height: 38px;
+    width: auto;
+}
+
+.logo-text {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: var(--basil);
+    letter-spacing: 0.02em;
 }
 
 .links {
     display: flex;
-    justify-content: space-around;
-    width: 50%;
+    gap: 2.2rem;
 }
 
 .links a {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 1.2rem;
-    border-bottom: 3px solid transparent;
-    border-radius: 6px;
-    transition: 0.3s ease-in-out;
+    position: relative;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--ink-soft);
+    transition: color 0.25s ease;
+    padding-bottom: 4px;
 }
 
-.links a:hover { 
-    border-bottom: 3px solid #d42e1f;
-    color: #ffd0b3;
-    transform: scale(1.05);
-}
-
-.logo img {
-    height: 99.5px;
-    margin-left: 100px;
-    margin-top: 2%;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #7b3911;
-    height: 100px;
-    position: fixed; 
-    top: 0;
+.links a::after {
+    content: "";
+    position: absolute;
     left: 0;
-    width: 100%;
-    z-index: 1000; 
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: var(--tomato);
+    transition: width 0.25s ease;
 }
+
+.links a:hover,
+.links a.active {
+    color: var(--tomato);
+}
+
+.links a:hover::after,
+.links a.active::after {
+    width: 100%;
+}
+
+/* ============ Hero ============ */
 
 .hero {
-    margin-top: 100px;
     position: relative;
+    min-height: 78vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
 }
 
-.fundo {
-    width: 50%;
-    height: 900px;
-    object-fit: cover;
-    left:50%;
-    top:50%;
-    position:relative;
-    filter: grayscale(0.35);
-}
-
-.hero .sobre-nos {
+.hero-bg {
     position: absolute;
-    top: 50%;
-    left: 25%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    color: rgb(48, 48, 48);
-    width: 35%;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.sobre-nos h1, .sobre-bruna h1 {
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(100deg, rgba(30, 45, 36, 0.92) 0%, rgba(30, 45, 36, 0.78) 38%, rgba(30, 45, 36, 0.25) 75%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 4rem 5%;
+    color: var(--cream);
+    max-width: 640px;
+}
+
+.eyebrow {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--gold);
     font-weight: 600;
-    text-align: left;
+    margin-bottom: 0.8rem;
 }
 
-.sobre-nos h2, .sobre-bruna h2 {
+.hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.4rem, 6vw, 4rem);
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.hero-title em {
+    font-style: italic;
+    color: var(--gold);
+}
+
+.hero-sub {
+    font-family: var(--font-display);
     font-weight: 400;
-    text-align: left;
-    color:#7b3911;
+    font-style: italic;
+    font-size: 1.4rem;
+    color: var(--cream);
+    margin: 0.8rem 0 1.4rem;
+    opacity: 0.9;
 }
 
-.sobre-nos p, .sobre-bruna p {
-    font-size: 20px;
-    font-weight: 100;
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgb(48, 48, 48);
+.hero-text {
+    font-size: 1rem;
+    color: rgba(250, 243, 232, 0.88);
+    max-width: 540px;
 }
 
-footer {
-    background-color: #7b3a11e7;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 50px;
-    margin-bottom: 0;
+/* ============ Desenvolvedora ============ */
+
+.dev {
+    max-width: var(--max-width);
+    margin: 5.5rem auto;
+    padding: 0 5%;
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    align-items: center;
+    gap: 3.5rem;
 }
 
-.endereco {
-    float: center;
-}
-
-.contato {
-    float: center;
-}
-
-.sobre-desenvolvedor {
-    margin-top: 100px;
+.dev-img {
     position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    aspect-ratio: 4 / 5;
+    background: var(--basil);
 }
 
-.bruna {
-    width: 400px;
-    height: 400px;
+.dev-img img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    top:50%;
-    position:relative;
-    border-radius: 50%;
-    margin-left: 15%;
-    filter: grayscale(0.3);
 }
 
-.sobre-desenvolvedor .sobre-bruna {
-    position: absolute;
-    top: 45%;
-    left: 75%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    color: rgb(48, 48, 48);
-    width: 35%;
+.prato-tag {
+    display: inline-block;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 600;
+    color: var(--tomato);
+    margin-bottom: 0.6rem;
+}
+
+.dev-texto h2 {
+    font-family: var(--font-display);
+    font-size: 2.2rem;
+    color: var(--basil);
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+}
+
+.dev-texto h3 {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.15rem;
+    color: var(--ink-soft);
+    margin-bottom: 1.2rem;
+}
+
+.dev-texto p {
+    color: var(--ink-soft);
+    font-size: 1rem;
+}
+
+/* ============ Footer ============ */
+
+.site-footer {
+    background: var(--basil-dark);
+    color: var(--cream);
+    padding: 3.5rem 5%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.site-footer b {
+    display: block;
+    font-size: 0.8rem;
+    letter-spacing: 0.14em;
+    color: var(--gold);
+    margin-bottom: 0.7rem;
+}
+
+.site-footer p {
+    font-size: 0.92rem;
+    color: rgba(250, 243, 232, 0.85);
+}
+
+.footer-brand .logo-text {
+    color: var(--cream);
+}
+
+.footer-brand p {
+    margin-top: 0.6rem;
+    font-style: italic;
+    color: rgba(250, 243, 232, 0.6);
+}
+
+/* ============ Responsivo ============ */
+
+@media (max-width: 860px) {
+    .hero {
+        min-height: 60vh;
+    }
+
+    .hero-overlay {
+        background: linear-gradient(180deg, rgba(30, 45, 36, 0.55) 0%, rgba(30, 45, 36, 0.92) 80%);
+    }
+
+    .dev {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .dev-img {
+        max-width: 320px;
+        margin: 0 auto;
+    }
+
+    .site-footer {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .links {
+        gap: 1.2rem;
+    }
+
+    .logo-text {
+        font-size: 1.1rem;
+    }
 }

@@ -1,174 +1,312 @@
-body {
-    background-color: #f2f1e6dc;
-    margin: 0; 
+:root {
+    --cream: #FAF3E8;
+    --basil: #2F4538;
+    --basil-dark: #1E2D24;
+    --tomato: #C1432D;
+    --gold: #C99A3E;
+    --ink: #2A2118;
+    --ink-soft: #5B5142;
+
+    --font-display: "Fraunces", serif;
+    --font-body: "Inter", sans-serif;
+
+    --max-width: 1140px;
+}
+
+* {
+    margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--ink);
+    background: var(--cream);
+    line-height: 1.6;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 5%;
+    background: var(--cream);
+    border-bottom: 1px solid rgba(42, 33, 24, 0.08);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.logo img {
+    height: 38px;
+    width: auto;
+}
+
+.logo-text {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: var(--basil);
+    letter-spacing: 0.02em;
 }
 
 .links {
     display: flex;
-    justify-content: space-around;
-    width: 50%;
+    gap: 2.2rem;
 }
 
 .links a {
-    text-decoration: none;
-    color: #ffffff;
-    font-size: 1.2rem;
-    border-bottom: 3px solid transparent;
-    border-radius: 6px;
-    transition: 0.3s ease-in-out;
-}
-
-.links a:hover { 
-    border-bottom: 3px solid #d42e1f;
-    color: #ffd0b3;
-    transform: scale(1.05);
-}
-
-.logo img {
-    height: 99.5px;
-    margin-left: 100px;
-    margin-top: 2%;
-}
-
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #7b3911;
-    height: 100px;
-    position: fixed; 
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000; 
-}
-
-.imgFundo {
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover; 
-    filter: grayscale(0.5);
-    margin-top: 100px;
-}
-
-
-.image-container .image-text {
-    position: absolute;
-    top:85%;
-    left: 37%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    color: rgba(255, 255, 255, 0.911);
-    font-size: 100px;
-    font-weight: bold;
-}
-
-h1 {
-    margin-top: 50px;
-    margin-left: 200px;
-    margin-right: 200px;
-    color: #7b3911;
-    font-weight: 900;
-}
-
-p {
-    font-weight: 100;
-    font-size: 17px;
-    margin-left: 200px;
-    margin-right: 200px;
-    margin-top: 10px;
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgb(48, 48, 48);
-    text-align: justify;
-}
-
-.pizza {
-    width: 25%;
-    height: 215px;
-    margin-top: 5%;
-    margin-left: 200px;
-    margin-bottom: 10%;
-    box-shadow: 0 0 10px;
-}
-
-.lasanha, .tiramisu, .risoto, .cannoli, .panna-cotta{
-    width: 25%;
-    height: 215px;
-    margin-left: 200px;
-    margin-bottom: 10%;
-    box-shadow: 0 0 10px;
-}
-
-.pizza:hover, .lasanha:hover, .tiramisu:hover, .risoto:hover, .cannoli:hover, .panna-cotta:hover { 
-    transform: scale(1.05);
-}
-
-.sobre-pizza, .sobre-lasanha, .sobre-tiramisu, .sobre-risoto, .sobre-cannoli, .sobre-panna-cotta {
     position: relative;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--ink-soft);
+    transition: color 0.25s ease;
+    padding-bottom: 4px;
 }
 
-.sobre-pizza .pizza-text {
+.links a::after {
+    content: "";
     position: absolute;
-    top: 30%;
-    left: 65%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    color: rgb(48, 48, 48);
-    width: 70%;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: var(--tomato);
+    transition: width 0.25s ease;
 }
 
-.sobre-lasanha .lasanha-text, .sobre-tiramisu .tiramisu-text, .sobre-risoto .risoto-text, .sobre-cannoli .cannoli-text, .panna-cotta-text {
+.links a:hover,
+.links a.active {
+    color: var(--tomato);
+}
+
+.links a:hover::after,
+.links a.active::after {
+    width: 100%;
+}
+
+.hero {
+    position: relative;
+    height: 64vh;
+    min-height: 420px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+}
+
+.hero-bg {
     position: absolute;
-    top: 15%;
-    left: 65%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    color: rgb(48, 48, 48);
-    width: 70%;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.pizza-text h1 {
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(30, 45, 36, 0.15) 0%, rgba(30, 45, 36, 0.85) 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 5% 3.5rem;
+    color: var(--cream);
+    max-width: 700px;
+}
+
+.eyebrow {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--gold);
     font-weight: 600;
-    text-align: left;
+    margin-bottom: 0.8rem;
 }
 
-.lasanha-text h1, .tiramisu-text h1, .risoto-text h1, .cannoli-text h1, .panna-cotta-text h1 {
+.hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.2rem, 5vw, 3.6rem);
     font-weight: 600;
-    text-align: left;
+    line-height: 1.15;
 }
 
-.pizza-text p {
-    font-size: 20px;
-    font-weight: 100;
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgb(48, 48, 48);
+.hero-title em {
+    font-style: italic;
+    color: var(--gold);
 }
 
-.lasanha-text p, .tiramisu-text p, .risoto-text p, .cannoli-text p, .panna-cotta-text p {
-    font-size: 20px;
-    font-weight: 100;
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgb(48, 48, 48);
-}
-
-footer {
-    background-color: #7b3a11e7;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 50px;
-    margin-bottom: 0;
-}
-
-.endereco, .endereco p {
-    float: center;
-    color: white;
+.intro {
+    max-width: var(--max-width);
+    margin: 5rem auto 4rem;
+    padding: 0 5%;
     text-align: center;
 }
 
-.contato, .contato p {
-    float: center;
-    color: white;
-    text-align: center;
+.section-title {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    color: var(--basil);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.intro-text {
+    max-width: 680px;
+    margin: 0 auto;
+    color: var(--ink-soft);
+    font-size: 1.05rem;
+}
+
+.intro-text strong {
+    color: var(--tomato);
+    font-weight: 600;
+}
+
+.pratos {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 1rem 5% 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4.5rem;
+}
+
+.prato {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 3rem;
+}
+
+.prato.reverso .prato-img {
+    order: 2;
+}
+
+.prato.reverso .prato-texto {
+    order: 1;
+}
+
+.prato-img {
+    position: relative;
+    border-radius: 18px;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    background: var(--basil);
+}
+
+.prato-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.prato:hover .prato-img img {
+    transform: scale(1.05);
+}
+
+.prato-tag {
+    display: inline-block;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 600;
+    color: var(--tomato);
+    margin-bottom: 0.6rem;
+}
+
+.prato-texto h3 {
+    font-family: var(--font-display);
+    font-size: 1.9rem;
+    color: var(--basil);
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.prato-texto p {
+    color: var(--ink-soft);
+    font-size: 1rem;
+}
+
+.site-footer {
+    background: var(--basil-dark);
+    color: var(--cream);
+    padding: 3.5rem 5%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.site-footer b {
+    display: block;
+    font-size: 0.8rem;
+    letter-spacing: 0.14em;
+    color: var(--gold);
+    margin-bottom: 0.7rem;
+}
+
+.site-footer p {
+    font-size: 0.92rem;
+    color: rgba(250, 243, 232, 0.85);
+}
+
+.footer-brand .logo-text {
+    color: var(--cream);
+}
+
+.footer-brand p {
+    margin-top: 0.6rem;
+    font-style: italic;
+    color: rgba(250, 243, 232, 0.6);
+}
+
+@media (max-width: 860px) {
+    .prato,
+    .prato.reverso {
+        grid-template-columns: 1fr;
+    }
+
+    .prato.reverso .prato-img,
+    .prato.reverso .prato-texto {
+        order: initial;
+    }
+
+    .site-footer {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .links {
+        gap: 1.2rem;
+    }
+
+    .logo-text {
+        font-size: 1.1rem;
+    }
 }

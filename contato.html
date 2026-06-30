@@ -1,62 +1,112 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <title>Sabor Italiano</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato — Sabor Italiano</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/contato.css">
 </head>
 <body>
-    <header>
 
+    <header class="site-header">
         <div class="logo">
-            <img src="assets/imagens/logo.png" alt="">
+            <img src="assets/imagens/logo.png" alt="Sabor Italiano">
+            <span class="logo-text">Sabor Italiano</span>
         </div>
 
-        <div class="links">
+        <nav class="links">
             <a href="index.html">Home</a>
             <a href="sobre.html">Sobre</a>
-            <a href="contato.html">Contato</a>
-        </div>
+            <a href="contato.html" class="active">Contato</a>
+        </nav>
     </header>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <form>
-        <fieldset>
-            <legend>Se cadastre em nosso site!</legend>
-            <label for="nome">Primeiro nome*</label>
-            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required maxlength="100">
 
-            <label for="nome">Sobrenome*</label>
-            <input type="text" id="sobrenome" name="sobrenome" placeholder="Digite seu sobrenome" required maxlength="100">
+    <section class="contato-hero">
+        <h1 class="section-title">Reserve sua mesa</h1>
+        <p class="contato-intro">
+            Preencha o formulário para se cadastrar em nosso site e garantir seu lugar
+            no nosso próximo jantar italiano. Respondemos em até 24 horas.
+        </p>
+    </section>
 
-            <label for="email">E-mail*</label>
-            <input type="email" id="email" name="email" placeholder="seuemail@gmail.com" required>
+    <main class="contato-wrap">
 
-        </fieldset>
+        <aside class="contato-info">
+            <div class="info-bloco">
+                <b>ENDEREÇO</b>
+                <p>R. Artur Fernandes Querido, 55<br>Vila Santo Antônio, Valinhos - SP<br>13270-530</p>
+            </div>
+            <div class="info-bloco">
+                <b>CONTATO</b>
+                <p>saboritaliano@gmail.com<br>+55 19 62580-6378</p>
+            </div>
+            <div class="info-bloco">
+                <b>HORÁRIO</b>
+                <p>Terça a domingo<br>18h às 23h</p>
+            </div>
+        </aside>
 
-        <fieldset>
-            <label for="nome">Telefone*</label>
-            <input type="text" id="telefone" name="telefone" placeholder="Digite seu número de telefone" required maxlength="100">
-        </fieldset>
+        <form class="contato-form">
+            <fieldset>
+                <legend>Se cadastre em nosso site!</legend>
 
-        <fieldset>
-            <label for="data-do-jantar">Data do jantar*</label>
-            <input type="date" id="data-do-jantar" required>
-        </fieldset>
+                <div class="campo-duplo">
+                    <div class="campo">
+                        <label for="nome">Primeiro nome*</label>
+                        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required maxlength="100">
+                    </div>
 
-        <fieldset>
-            <label for="mensagem">Mensagem*</label>
-            <textarea name="mensagem" id="mensagem" rows="5" placeholder="Deixe sua mensagem!" required></textarea>
-        </fieldset>
-        <br>
-        <button type="submit">Enviar</button>
+                    <div class="campo">
+                        <label for="sobrenome">Sobrenome*</label>
+                        <input type="text" id="sobrenome" name="sobrenome" placeholder="Digite seu sobrenome" required maxlength="100">
+                    </div>
+                </div>
 
-    </form>
+                <div class="campo">
+                    <label for="email">E-mail*</label>
+                    <input type="email" id="email" name="email" placeholder="seuemail@gmail.com" required>
+                </div>
+
+                <div class="campo-duplo">
+                    <div class="campo">
+                        <label for="telefone">Telefone*</label>
+                        <input type="tel" id="telefone" name="telefone" placeholder="(19) 90000-0000" required maxlength="20">
+                    </div>
+
+                    <div class="campo">
+                        <label for="data-do-jantar">Data do jantar*</label>
+                        <input type="date" id="data-do-jantar" name="data-do-jantar" required>
+                    </div>
+                </div>
+
+                <div class="campo">
+                    <label for="mensagem">Mensagem*</label>
+                    <textarea name="mensagem" id="mensagem" rows="5" placeholder="Deixe sua mensagem!" required></textarea>
+                </div>
+            </fieldset>
+
+            <button type="submit">Enviar</button>
+        </form>
+
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-col">
+            <b>ENDEREÇO</b>
+            <p>R. Artur Fernandes Querido, 55<br>Vila Santo Antônio, Valinhos - SP<br>13270-530</p>
+        </div>
+        <div class="footer-col">
+            <b>CONTATO</b>
+            <p>saboritaliano@gmail.com<br>+55 19 62580-6378</p>
+        </div>
+        <div class="footer-col footer-brand">
+            <span class="logo-text">Sabor Italiano</span>
+            <p>© 2026. Feito com amore.</p>
+        </div>
+    </footer>
+
 </body>
 </html>

@@ -1,49 +1,61 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <title>Sabor Italiano</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre — Sabor Italiano</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/sobre.css">
 </head>
 <body>
-    <header>
 
+    <header class="site-header">
         <div class="logo">
-            <img src="assets/imagens/logo.png" alt="">
+            <img src="assets/imagens/logo.png" alt="Sabor Italiano">
+            <span class="logo-text">Sabor Italiano</span>
         </div>
 
-        <div class="links">
+        <nav class="links">
             <a href="index.html">Home</a>
-            <a href="sobre.html">Sobre</a>
+            <a href="sobre.html" class="active">Sobre</a>
             <a href="contato.html">Contato</a>
-        </div>
+        </nav>
     </header>
-        <div class="hero">
-                <img class="fundo" src="assets/imagens/macarronada.png" alt="">
-            <div class="sobre-nos">
-                <h1>Sabor Italiano</h1>
-                <h2>Um pouco sobre nós!</h2>
-                <p>
-                    O propósito do Sabor Italiano é compartilhar a rica tradição culinária da Itália, oferecendo receitas autênticas, dicas de preparo, e informações sobre ingredientes típicos, além de explorar a história e a cultura por trás de cada prato. Nosso site pode servir tanto para entusiastas da gastronomia quanto para profissionais que desejam aperfeiçoar suas habilidades na cozinha italiana. Além disso, nosso site pode incluir recomendações de restaurantes, produtos italianos, e até viagens gastronômicas, criando uma imersão completa no universo da cozinha italiana.
-                </p>
-            </div>
-        </div>
 
-        <div class="sobre-desenvolvedor">
-            <img class="bruna" src="assets/imagens/bruna.png" alt="">
-            <div class="sobre-bruna">
-                <h1>Bruna Savelli</h1>
-                <h2>Desenvolvedora do nosso site</h2>
-                <p>Bruna Savelli, uma estudante da escola SENAI, que desenvolveu esse site dedicado à comida italiana. Com uma paixão herdada de sua família e um profundo interesse pela culinária, Bruna se inspirou a criar um espaço online onde pudesse compartilhar receitas tradicionais, dicas de preparo e histórias sobre a rica cultura gastronômica da Itália. O site reflete seu amor pela culinária italiana e seu desejo de manter vivas as tradições que foram passadas por gerações.</p>
-            </div>
+    <section class="hero">
+        <img class="hero-bg" src="assets/imagens/macarronada.png" alt="">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="eyebrow">Nossa história</p>
+            <h1 class="hero-title">Sabor <em>Italiano</em></h1>
+            <h2 class="hero-sub">Um pouco sobre nós!</h2>
+            <p class="hero-text">
+                O propósito do Sabor Italiano é compartilhar a rica tradição culinária da Itália,
+                oferecendo receitas autênticas, dicas de preparo e informações sobre ingredientes
+                típicos, além de explorar a história e a cultura por trás de cada prato. Nosso site
+                serve tanto entusiastas da gastronomia quanto profissionais que desejam aperfeiçoar
+                suas habilidades na cozinha italiana — com recomendações de restaurantes, produtos
+                italianos e viagens gastronômicas, criando uma imersão completa nesse universo.
+            </p>
         </div>
+    </section>
 
-    <footer>
-        <div class="endereco"><b>ENDEREÇO</b>
-            <p>R. Artur Fernandes Querido,<br> 55 - Vila Santo Antonio, Valinhos - SP,<br> 13270-530</p>
+    <footer class="site-footer">
+        <div class="footer-col">
+            <b>ENDEREÇO</b>
+            <p>R. Artur Fernandes Querido, 55<br>Vila Santo Antônio, Valinhos - SP<br>13270-530</p>
         </div>
-        <div class="contato"><b>CONTATO</b>
+        <div class="footer-col">
+            <b>CONTATO</b>
             <p>saboritaliano@gmail.com<br>+55 19 62580-6378</p>
         </div>
+        <div class="footer-col footer-brand">
+            <span class="logo-text">Sabor Italiano</span>
+            <p>© 2026. Feito com amore.</p>
+        </div>
     </footer>
+
 </body>
 </html>

@@ -1,86 +1,141 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <title>Sabor Italiano</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabor Italiano — Culinária italiana com alma</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-    <header>
 
+    <header class="site-header">
         <div class="logo">
-            <img src="assets/imagens/logo.png" alt="">
+            <img src="assets/imagens/logo.png" alt="Sabor Italiano">
+            <span class="logo-text">Sabor Italiano</span>
         </div>
 
-        <div class="links">
-            <a href="index.html">Home</a>
+        <nav class="links">
+            <a href="index.html" class="active">Home</a>
             <a href="sobre.html">Sobre</a>
             <a href="contato.html">Contato</a>
-        </div>
+        </nav>
     </header>
 
-    <div class="image-container">
-        <img class="imgFundo" src="assets/imagens/imgFundo.png" alt="">
-        <div class="image-text">Culinária italiana: história e sabores</div>
-    </div>
-    <h1>Sabor Italiano</h1>
-    <p>A <b>culinária italiana</b> é uma das mais saborosas do mundo. Com pratos que envolvem os mais variados tipos de vegetais, carnes e massas, não há quem resista aos encantos desta gastronomia. Todo este sabor tem origem na própria história do país. Com o passar dos séculos, a história e a culinária italiana evoluíram juntos.</p>
-
-        <div class="sobre-pizza">
-            <img class="pizza" src="assets/imagens/pizza.png" alt="">
-            <div class="pizza-text">
-                <h1>Pizza Margherita</h1>
-                <p>Um clássico da culinária italiana, feito com molho de tomate, mussarela, manjericão fresco, azeite de oliva e sal, representando as cores da bandeira italiana.</p>
-
-            </div>
+    <section class="hero">
+        <img class="hero-bg" src="assets/imagens/banner.jpg" alt="">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="eyebrow">Da Itália para a sua mesa</p>
+            <h1 class="hero-title">Culinária italiana:<br><em>história</em> e sabores</h1>
         </div>
+    </section>
 
-        <div class="sobre-lasanha">
-            <img class="lasanha" src="assets/imagens/lasanha.png" alt="">
-            <div class="lasanha-text">
-                <h1>Lasagna</h1>
-                <p>Um prato de camadas de massa intercaladas com molho de carne (ragù), queijo ricota ou bechamel, e coberto com queijo mussarela.</p>
-            </div>
-        </div>
-        
-        <div class="sobre-risoto">
-            <img class="risoto" src="assets/imagens/risoto.png" alt="">
-            <div class="risoto-text">
-                <h1>Risotto alla Milanese</h1>
-                <p>Um prato típico da região da Lombardia, especialmente de Milão. É um risoto cremoso feito com arroz Arborio, açafrão, manteiga, vinho branco e queijo Parmigiano-Reggiano.</p>
-            </div>
-        </div>
+    <main>
+        <section class="intro">
+            <h2 class="section-title">Sabor Italiano</h2>
+            <p class="intro-text">
+                A <strong>culinária italiana</strong> é uma das mais saborosas do mundo. Com pratos
+                que envolvem os mais variados tipos de vegetais, carnes e massas, não há quem
+                resista aos encantos desta gastronomia. Todo este sabor tem origem na própria
+                história do país — com o passar dos séculos, a história e a culinária italiana
+                evoluíram juntas.
+            </p>
+        </section>
 
-        <div class="sobre-tiramisu">
-            <img class="tiramisu" src="assets/imagens/tiramisu.png" alt="">
-            <div class="tiramisu-text">
-                <h1>Tiramisu</h1>
-                <p>Uma sobremesa feita em camadas de biscoitos de champanhe (savoiardi) embebidos em café, intercalados com um creme à base de mascarpone e polvilhado com cacau em pó.</p>
-            </div>
-        </div>
+        <section class="pratos">
 
-        <div class="sobre-cannoli">
-            <img class="cannoli" src="assets/imagens/cannoli.png" alt="">
-            <div class="cannoli-text">
-                <h1>Cannoli</h1>
-                <p>Um doce originário da Sicília, consiste em uma casquinha frita crocante recheada com um creme de ricota doce. O recheio pode ser aromatizado com ingredientes como frutas cristalizadas, chocolate ou pistache.</p>
-            </div>
-        </div>
+            <article class="prato">
+                <div class="prato-img">
+                    <img src="assets/imagens/pizza.png" alt="Pizza Margherita">
+                </div>
+                <div class="prato-texto">
+                    <span class="prato-tag">Clássico napolitano</span>
+                    <h3>Pizza Margherita</h3>
+                    <p>Feita com molho de tomate, mussarela e manjericão fresco, regada em
+                       azeite de oliva e sal — uma homenagem às cores da bandeira italiana.</p>
+                </div>
+            </article>
 
-        <div class="sobre-panna-cotta">
-            <img class="panna-cotta" src="assets/imagens/panna-cotta.png" alt="">
-            <div class="panna-cotta-text">
-                <h1>Panna Cotta</h1>
-                <P>Um doce típico do norte da Itália, é uma sobremesa cremosa feita de creme de leite, açúcar e gelatina, que é geralmente servida com calda de frutas vermelhas, caramelo ou chocolate.
-                </P>
-            </div>
+            <article class="prato reverso">
+                <div class="prato-img">
+                    <img src="assets/imagens/lasanha.png" alt="Lasagna">
+                </div>
+                <div class="prato-texto">
+                    <span class="prato-tag">Tradição em camadas</span>
+                    <h3>Lasagna</h3>
+                    <p>Camadas de massa intercaladas com molho de carne (ragù), queijo ricota
+                       ou bechamel, finalizadas com mussarela derretida.</p>
+                </div>
+            </article>
+
+            <article class="prato">
+                <div class="prato-img">
+                    <img src="assets/imagens/risoto.png" alt="Risotto alla Milanese">
+                </div>
+                <div class="prato-texto">
+                    <span class="prato-tag">Lombardia</span>
+                    <h3>Risotto alla Milanese</h3>
+                    <p>Risoto cremoso feito com arroz Arborio, açafrão, manteiga, vinho branco
+                       e queijo Parmigiano-Reggiano.</p>
+                </div>
+            </article>
+
+            <article class="prato reverso">
+                <div class="prato-img">
+                    <img src="assets/imagens/tiramisu.png" alt="Tiramisu">
+                </div>
+                <div class="prato-texto">
+                    <span class="prato-tag">Doce clássico</span>
+                    <h3>Tiramisù</h3>
+                    <p>Camadas de biscoitos champanhe embebidos em café, intercaladas com creme
+                       de mascarpone e finalizadas com cacau em pó.</p>
+                </div>
+            </article>
+
+            <article class="prato">
+                <div class="prato-img">
+                    <img src="assets/imagens/cannoli.png" alt="Cannoli">
+                </div>
+                <div class="prato-texto">
+                    <span class="prato-tag">Origem siciliana</span>
+                    <h3>Cannoli</h3>
+                    <p>Casquinha frita e crocante recheada com creme de ricota doce, podendo
+                       levar frutas cristalizadas, chocolate ou pistache.</p>
+                </div>
+            </article>
+
+            <article class="prato reverso">
+                <div class="prato-img">
+                    <img src="assets/imagens/panna-cotta.png" alt="Panna Cotta">
+                </div>
+                <div class="prato-texto">
+                    <span class="prato-tag">Norte da Itália</span>
+                    <h3>Panna Cotta</h3>
+                    <p>Sobremesa cremosa de creme de leite, açúcar e gelatina, servida com
+                    calda de frutas vermelhas, caramelo ou chocolate.</p>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-col">
+            <b>ENDEREÇO</b>
+            <p>R. Artur Fernandes Querido, 55<br>Vila Santo Antônio, Valinhos - SP<br>13270-530</p>
         </div>
-        <footer>
-            <div class="endereco"><b>ENDEREÇO</b>
-                <p>R. Artur Fernandes Querido,<br> 55 - Vila Santo Antonio, Valinhos - SP,<br> 13270-530</p>
-            </div>
-            <div class="contato"><b>CONTATO</b>
-                <p>saboritaliano@gmail.com<br>+55 19 62580-6378</p>
-            </div>
-        </footer>
+        <div class="footer-col">
+            <b>CONTATO</b>
+            <p>saboritaliano@gmail.com<br>+55 19 62580-6378</p>
+        </div>
+        <div class="footer-col footer-brand">
+            <span class="logo-text">Sabor Italiano</span>
+            <p>© 2026. Feito com amore.</p>
+        </div>
+    </footer>
+
 </body>
 </html>
